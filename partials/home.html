@@ -1,0 +1,26 @@
+	<div class="container-fluid">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="row">
+						<div class="col-md-4 log-me-in"><h1>Log Me In</h1>
+							<button type="button" class="btn btn-primary navbar-btn" ng-click="displayLogin()">Log Me In >> </button>
+							<div ng-show="showLogin"><h2> {{messageLogin}} </h2></div>
+						</div>
+						<div class="col-md-4 im-new-here"><h1>I'm New Here</h1>
+							<button type="button" class="btn btn-primary navbar-btn" ng-click="displayRegister()">Register >> </button>
+							<div ng-show="showRegister"><h2> {{messageRegister}} </h2></div>
+						</div>
+						<div class="col-md-4 express-appt"><h1>Express Appointment</h1>
+							<button type="button" class="btn btn-primary navbar-btn" ng-click="displayExpress()">Express >> </button>
+							<div ng-show="showExpress"><h2> {{messageExpress}} </h2></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</div>
+	</div>
+
+

@@ -1,0 +1,32 @@
+{
+  "name": "Book-That-Lesson",
+  "version": "1",
+  "homepage": "https://github.com/LandoB/Book-That-Lesson",
+  "description": "WebApp to Book Golf Lessons Online",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Book",
+    "Lesson",
+    "Golf"
+  ],
+  "authors": [
+    "Rolando Bernal"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "font-awesome": "~4.3.0"
+  }
+}

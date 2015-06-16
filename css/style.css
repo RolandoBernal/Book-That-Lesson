@@ -1,0 +1,85 @@
+/*!
+ * Start Bootstrap - Stylish Portfolio Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ /* --- Fonts selection ---*/
+@import url(https://fonts.googleapis.com/css?family=Reenie+Beanie|Architects+Daughter|Rock+Salt|Special+Elite|Nunito|Inconsolata);
+@import url(https://fonts.googleapis.com/css?family=ABeeZee:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+/* Global Styles */
+
+body{
+	/*background: #ffffff;*/
+	color: #34495e;font-family: 'ABeeZee';size: 14px;}
+
+.main-div {
+	background: url(../img/MyGolfBackground.jpg) no-repeat center center scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	filter: Alpha(Opacity=0);
+	position:fixed !important;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+
+ /* Heading Style */
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Open Sans';}
+
+
+/* NAV BAR Style*/
+
+.navbar-inverse {
+	color: #1e73be;
+   background-color: #fff;
+   border-color: #1e73be;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #1e73be;
+}
+
+.navbar-brand:hover {
+	color: #34495e;
+}
+
+.book-that-lesson {
+	color: red;
+}
+
+
+/*Link Color*/
+
+a {
+	color: #aaa;
+	text-decoration: none;
+}
+
+
+/*Link Hover Color*/
+
+a:hover {
+	color: #aaa;
+	text-decoration: none;
+}
+
+a:active,
+a:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Header Style */
+
+#header {
+	background-color: #ffffff;}
+
