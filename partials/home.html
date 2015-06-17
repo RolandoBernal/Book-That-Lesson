@@ -1,26 +1,65 @@
-	<div class="container-fluid">
+	<div class="container-fluid main-div">
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
-					<div class="row">
-						<div class="col-md-4 log-me-in"><h1>Log Me In</h1>
-							<button type="button" class="btn btn-primary navbar-btn" ng-click="displayLogin()">Log Me In >> </button>
-							<div ng-show="showLogin"><h2> {{messageLogin}} </h2></div>
+					<div class="row div-background">
+
+						<div class="col-md-4 log-me-in"><h1 class="logmein">Log Me In</h1><br>
+							<button type="button" class="btn btn-primary navbar-btn top-padding" ng-click="displayLogin()">Log Me In</button>
+							<div ng-show="showLogin">
+								<h4> {{messageLogin}} </h4>
+								<h4> {{messageLogin2}} </h4><br>
+								<form method="POST" action="/#/user">
+									<div class="formfield">
+										<div class="formfield--prompt">Username:</div>
+										<input type="text" id="username" name="username" required>
+									</div>
+									<div class="formfield">
+										<div class="formfield--prompt">Password:</div>
+										<input type="password" id="password" name="password" required>
+									</div><br>
+									<input class="submitButton btn btn-primary" type="submit" value="Login >>"></input><br>
+								</form>
+							</div><br>
 						</div>
-						<div class="col-md-4 im-new-here"><h1>I'm New Here</h1>
-							<button type="button" class="btn btn-primary navbar-btn" ng-click="displayRegister()">Register >> </button>
-							<div ng-show="showRegister"><h2> {{messageRegister}} </h2></div>
+
+						<div class="col-md-4 im-new-here"><h1 class="imnewhere">I'm New Here</h1><br>
+							<button type="button" class="btn btn-primary navbar-btn top-padding" ng-click="displayRegister()">Register</button>
+							<div ng-show="showRegister">
+								<h4> {{messageRegister}} </h4><br>
+									<form method="POST" action="/#/user">
+									<div class="formfield">
+										<div class="formfield--prompt">Create Username:</div>
+										<input type="text" id="username" name="username" required>
+									</div>
+									<div class="formfield">
+										<div class="formfield--prompt">Create Password:</div>
+										<input type="password" id="password" name="password" required>
+									</div>
+									<div class="formfield">
+										<div class="formfield--prompt">Enter your Email:</div>
+										<input type="email" id="email" name="email" required>
+									</div><br>
+									<input class="submitButton btn btn-primary" type="submit" value="Go >>"></input><br>
+								</form>
+							</div><br>
 						</div>
-						<div class="col-md-4 express-appt"><h1>Express Appointment</h1>
-							<button type="button" class="btn btn-primary navbar-btn" ng-click="displayExpress()">Express >> </button>
-							<div ng-show="showExpress"><h2> {{messageExpress}} </h2></div>
+
+						<div class="col-md-4 express-appt"><h1 class="expressappt">Express Appointment</h1>
+							<button type="button" class="btn btn-primary navbar-btn" ng-click="displayExpress()">Express</button>
+							<div ng-show="showExpress"><br><br><br><br><br>
+								<h4> {{messageExpress}} </h4>
+								<h4> {{messageExpress2}} </h4><br><br><br><br><br><br>
+							</div>
 						</div>
+
 					</div>
 				</div>
 				<div class="col-md-1"></div>
 			</div>
 		</div>
 	</div>
+
 
 
