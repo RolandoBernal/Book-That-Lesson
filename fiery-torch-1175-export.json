@@ -1,0 +1,37 @@
+{
+  "instructor" : [ null, {
+    "bio" : "Started playing golf when he was 3 years old. Has won 14 majors.",
+    "experience" : 36,
+    "name" : "Tiger Woods"
+  }, {
+    "bio" : "Simply put: The King",
+    "experience" : 87,
+    "name" : "Arnold Palmer"
+  } ],
+  "lessons" : [ null, {
+    "date" : "10/10/2015",
+    "description" : "Driving",
+    "instructor" : "tiger",
+    "lessonID" : "001",
+    "student" : "joe"
+  }, {
+    "date" : "10/10/2015",
+    "description" : "putting",
+    "instructor" : "Arnold Palmer",
+    "lessoniD" : "002",
+    "student" : "jon"
+  } ],
+  "students" : [ null, {
+    "email" : "joe@doe.com",
+    "firstName" : "joe",
+    "lastName" : "doe",
+    "password" : "joe",
+    "username" : "joe"
+  }, {
+    "email" : "jonh@smith.com",
+    "firstName" : "jon",
+    "lastName" : "smith",
+    "password" : "jonjon",
+    "username" : "jon"
+  } ]
+}

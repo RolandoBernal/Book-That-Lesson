@@ -10,16 +10,16 @@
 							<div ng-show="showLogin">
 								<h4> {{messageLogin}} </h4>
 								<h4> {{messageLogin2}} </h4><br>
-								<form method="POST" action="/#/user">
-									<div class="formfield">
-										<div class="formfield--prompt">Username:</div>
-										<input type="text" id="username" name="username" required>
+								<form role="form" novalidate="novalidate" name="userForm">
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input id="email" type="text" name="email" ng-model="user.email" autofocus="autofocus" required="required" ng-minlength="3" class="form-control"/>
 									</div>
-									<div class="formfield">
-										<div class="formfield--prompt">Password:</div>
-										<input type="password" id="password" name="password" required>
-									</div><br>
-									<input class="submitButton btn btn-primary" type="submit" value="Login >>"></input><br>
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input id="password" type="password" name="password" ng-model="user.password" required="required" ng-minlength="3" class="form-control"/>
+									</div>
+									<button ng-show="userForm.$valid" ng-click="login()" class="btn btn-primary">Login >></button>
 								</form>
 							</div><br>
 						</div>
@@ -28,23 +28,25 @@
 							<button type="button" class="btn btn-primary navbar-btn top-padding" ng-click="displayRegister()">Register</button>
 							<div ng-show="showRegister">
 								<h4> {{messageRegister}} </h4><br>
-									<form method="POST" action="/#/user">
-									<div class="formfield">
-										<div class="formfield--prompt">Create Username:</div>
-										<input type="text" id="username" name="username" required>
+								<form role="form" novalidate="novalidate" name="userForm">
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input id="email" type="text" name="email" ng-model="user.email" autofocus="autofocus" required="required" ng-minlength="3" class="form-control"/>
 									</div>
-									<div class="formfield">
-										<div class="formfield--prompt">Create Password:</div>
-										<input type="password" id="password" name="password" required>
+									<div class="form-group">
+										<label for="name">Name</label>
+										<input id="name" type="text" name="name" ng-model="user.name" autofocus="autofocus" required="required" ng-minlength="3" class="form-control"/>
 									</div>
-									<div class="formfield">
-										<div class="formfield--prompt">Enter your Email:</div>
-										<input type="email" id="email" name="email" required>
-									</div><br>
-									<input class="submitButton btn btn-primary" type="submit" value="Go >>"></input><br>
+									<div class="form-group">
+										<label for="password">Password</label>
+										<input id="password" type="password" name="password" ng-model="user.password" required="required" ng-minlength="3" class="form-control"/>
+									</div>
+									<button ng-show="userForm.$valid" ng-click="register()" class="btn btn-primary">Register >></button>
 								</form>
 							</div><br>
 						</div>
+
+
 
 						<div class="col-md-4 express-appt"><h1 class="expressappt">Express Appointment</h1>
 							<button type="button" class="btn btn-primary navbar-btn" ng-click="displayExpress()">Express</button>
