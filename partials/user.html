@@ -1,0 +1,53 @@
+	<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/#/" class="navbar-brand">Book That Lesson!</a>
+			</div>
+			<div id="navbarCollapse" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>{{ rootScope.email }}</li>
+					<li><button ng-click="logout()" class="btn btn-danger">Logout X</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br><br><br><br><br>
+	<div class="container-fluid main-div">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10">
+					<div class="row div-background">
+						<div class="col-md-2"></div>
+						<div class="col-md-6 log-me-in"><h1 class="logmein">Welcome {{ userName }}!</h1><br>
+						<h3 class="logmein">You have {{ lessons.length }} lesson(s) booked.</h3><br>
+							<div id="lessons" class="row">
+								<div class="col-sm-12 col-md-4" ng-repeat="lesson in lessons">
+									<!-- <p> {{ lesson }}</p> -->
+									<div class="row" ng-repeat='lesson in lessons'>
+									  <div class="col-xs-3">{{ lesson.description }}</div>
+									  <div class="col-xs-3">{{ lesson.instructor }}</div>
+									  <div class="col-xs-3">{{ lesson.date }}</div>
+									  <div class="col-xs-3">
+									    <button ng-click="editLesson()">Modify</button>
+									    <button ng-click="cancelLesson()">Cancel</button>
+									  </div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+			</div>
+		</div>
+	</div>

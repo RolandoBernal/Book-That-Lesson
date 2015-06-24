@@ -12,60 +12,44 @@
 
 	</head>
 	<body ng-app="myApp">
-		<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="/#/" class="navbar-brand">Book That Lesson!</a>
-				</div>
-				<div id="navbarCollapse" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-					</ul>
-					<ul class="nav navbar-nav navbar-right" ng-show="rootScope.email">
-						<li><button type="button" class="btn btn-primary navbar-btn"> <a href="/#/">LESSON >> </a></button></li>
-						<li><button type="button" class="btn btn-primary navbar-btn"> <a href="/#/register">INSTRUCTOR >> </a></button></li>
-						<li><button type="button" class="btn btn-primary navbar-btn"> <a href="/#/comingSoon">APPOINTMENT >> </a></button></li>
-						<li><button type="button" class="btn btn-primary navbar-btn"> <a href="/#/comingSoon">BOOK IT! >> </a></button></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<br><br><br><br><br>
+
 		<div ng-view>
 		</div>
+
+		<footer>
+			<div>
+
+				<div>
+					<a class="list-group-item" href='https://github.com/LandoB/Book-That-Lesson'>
+						<h4 class="list-group-item-heading"> About the Code >> Check Out the GitHub Repo</h4></a>
+					<a class="list-group-item" href='http://www.rolandobernal.com'>
+						<h4 class="list-group-item-heading"> More About Me >> Check Out My Portfolio</h4></a>
+					</div>
+
+			</div>
+		</footer>
 
 
 	</body>
 
-	<footer>
-		<div>
 
-			<div>
-				<a class="list-group-item" href='https://github.com/LandoB/Book-That-Lesson'>
-					<h4 class="list-group-item-heading"> About the Code >> Check Out the GitHub Repo</h4></a>
-				<a class="list-group-item" href='http://www.rolandobernal.com'>
-					<h4 class="list-group-item-heading"> More About Me >> Check Out My Portfolio</h4></a>
-				</div>
-
-		</div>
-	</footer>
-
+<!-- Here is where others stuff is -->
 	<script src='bower_components/jquery/dist/jquery.min.js'></script>
 	<script src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/firebase/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
 
+<!-- Here is where my stuff starts -->
 	<script src="js/app.js"></script>
 
-	<script src="js/controllers/homeController.js"></script>
+	<script src="js/controllers/mainController.js"></script>
 	<script src="js/controllers/errorController.js"></script>
 	<script src="js/controllers/instructorController.js"></script>
 	<script src="js/controllers/lessonController.js"></script>
-	<script src="js/controllers/studentController.js"></script>
-	<script src="js/wuFactory.js"></script>
+	<script src="js/controllers/authController.js"></script>
+	<script src="js/factories/authFactory.js"></script>
+
+	<script src="js/controllers/userController.js"></script>
 </html>
