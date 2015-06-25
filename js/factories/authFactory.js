@@ -1,6 +1,6 @@
 app.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope, $location, API_URL) {
 
-    console.log("Auth Factory.");
+    console.log("Auth Controller in Auth Factory. ");
 
     var fb = new Firebase(API_URL);
 

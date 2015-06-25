@@ -10,6 +10,7 @@ app.controller('MainCtrl', ['$scope', 'Auth', '$location', function($scope, Auth
 	$scope.messageRegister = "Tell us about yourself to get started...";
 	$scope.messageExpress = "COMING SOON";
 	$scope.messageExpress2 = "in v2.0";
+	$scope.userName = "";
 
 
 	$scope.displayLogin = function(){
@@ -35,8 +36,13 @@ console.log("Auth Controller in the MainCtrl");
 	$scope.login = function() {
 		console.log("You clicked the LOGIN button");
 		Auth.login($scope.user.email, $scope.user.password, function() {
+			alert($scope.user.email);
+			// var userName = $scope.user.email;
 			$location.path('/user');
 			$scope.$apply();
+			console.log("$scope.user.email : ",$scope.user.email);
+			$scope.userName = $scope.user.email;
+			console.log($scope.userName);
 		});
 	};
 
