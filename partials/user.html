@@ -13,8 +13,8 @@
 				<ul class="nav navbar-nav">
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li>User Name: {{$scope.user.name}}</li>
-					<li><button ng-click="logout()" class="btn btn-danger">Logout</li>
+					<li class="user-nav">{{ auth.password.email }}</li>
+					<li class="logout-nav"><button ng-click="logout()" class="btn btn-danger">Logout</li>
 				</ul>
 			</div>
 		</div>
@@ -27,7 +27,7 @@
 				<div class="col-md-10">
 					<div class="row div-background">
 						<div class="col-md-2"></div>
-						<div class="col-md-6 log-me-in"><h1 class="logmein">Welcome {{$scope.user.name}}!</h1><br>
+						<div class="col-md-6 log-me-in"><h1 class="logmein">Welcome {{ auth.password.email }}!</h1><br>
 
 
 

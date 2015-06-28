@@ -57,8 +57,6 @@ h1, h2, h3, h4, h5, h6{
 
 /* NAV BAR Style*/
 
-
-
 .navbar-inverse {
 	color: #1e73be;
 	background-color: rgba(255,255,255,0.5);
@@ -76,6 +74,19 @@ a.navbar-inverse:focus,
 a.navbar-brand:active,
 a.navbar-inverse:active {
 	color: #34495e;
+}
+
+@media (min-width: 768px) {
+	.navbar-right {
+	  float: right !important;
+	  margin-right: 0px;
+	  width: 175px;
+		padding-top: 10px;
+	}
+}
+
+.user-nav {
+	padding-right: 10px;
 }
 
 .book-that-lesson {
