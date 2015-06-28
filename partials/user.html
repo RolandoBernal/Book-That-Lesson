@@ -13,7 +13,7 @@
 				<ul class="nav navbar-nav">
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li>{{userName}}</li>
+					<li>User Name: {{$scope.user.name}}</li>
 					<li><button ng-click="logout()" class="btn btn-danger">Logout</li>
 				</ul>
 			</div>
@@ -27,22 +27,37 @@
 				<div class="col-md-10">
 					<div class="row div-background">
 						<div class="col-md-2"></div>
-						<div class="col-md-6 log-me-in"><h1 class="logmein">Welcome {{userName}}!</h1><br>
-						<h3 class="logmein">You have {{ lessons.length }} lesson(s) booked.</h3><br>
-							<div id="lessons" class="row">
-								<div class="col-sm-12 col-md-4" ng-repeat="lesson in lessons">
-									<!-- <p> {{ lesson }}</p> -->
-									<div class="row" ng-repeat='lesson in lessons'>
-										<div class="col-xs-3">{{ lesson.description }}</div>
-										<div class="col-xs-3">{{ lesson.instructor }}</div>
-										<div class="col-xs-3">{{ lesson.date }}</div>
-										<div class="col-xs-3">
-											<button ng-click="editAppointment()">Change Appointment</button>
-											<button ng-click="cancelAppointment()">Cancel Appointment</button>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="col-md-6 log-me-in"><h1 class="logmein">Welcome {{$scope.user.name}}!</h1><br>
+
+
+
+						    <!-- ACCOUNT PANEL -->
+						    <div class="panel" ng-show="authData" >
+						      <!-- Logged in user data -->
+						      <img ng-src="{{ authData.github.cachedUserProfile.avatar_url }}" />
+						      <p>
+						        {{ authData.github.displayName }} / <b><a href="{{ authData.github.cachedUserProfile.html_url }}">@{{ authData.github.username }}</a></b>
+						      </p>
+
+						      <!-- Logout button -->
+						      <button ng-click="logout()" class="btn btn-danger">Logout</button>
+						    </div>
+
+						    <!-- LESSON LIST -->
+						    <div class="panel" ng-show="authData">
+						      <h4>Your lessons booked</h4>
+
+						      <ul>
+						        <li class="list-group-item" ng-repeat="repo in repos">
+						          <a href="{{ repo.html_url }}">
+						            {{ repo.full_name }}
+						          </a>
+						        </li>
+						      </ul>
+						    </div>
+
+
+
 						</div>
 						<div class="col-md-2"></div>
 					</div>
@@ -51,3 +66,4 @@
 			</div>
 		</div>
 	</div>
+

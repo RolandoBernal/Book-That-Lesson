@@ -11,9 +11,11 @@ app.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope, 
       }, function(err, authData) {
         if(err) {
           console.log(err);
+          alert("Something went wrong. Either the email does not exist or the password is incorrect. Please verify your information.");
         } else {
           $rootScope.auth = authData;
           cb();
+          console.log(authData);
         }
       });
     }
@@ -27,6 +29,7 @@ app.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope, 
         } else {
           $rootScope.auth = authData;
           cb();
+          alert("You have registered successfully. Now go login.")
         }
       })
     }

@@ -1,6 +1,6 @@
-app.controller('MainCtrl', ['$scope', 'Auth', '$location', function($scope, Auth, $location, $http){
+app.controller('MainCtrl', ['$scope', 'Auth', '$location', '$rootScope', function($scope, Auth, $location, $http, $rootScope){
 
-	console.log("Main Controller.");
+	// console.log("Main Controller.");
 
 	$scope.showLogin = false;
 	$scope.showRegister = false;
@@ -31,18 +31,16 @@ app.controller('MainCtrl', ['$scope', 'Auth', '$location', function($scope, Auth
 		$scope.showExpress = true;
 	}
 
-console.log("Auth Controller in the MainCtrl");
+// console.log("Auth Controller in the MainCtrl");
 
 	$scope.login = function() {
 		console.log("You clicked the LOGIN button");
 		Auth.login($scope.user.email, $scope.user.password, function() {
-			alert($scope.user.email);
-			// var userName = $scope.user.email;
 			$location.path('/user');
 			$scope.$apply();
-			console.log("$scope.user.email : ",$scope.user.email);
-			$scope.userName = $scope.user.email;
-			console.log($scope.userName);
+			console.log("$scope.user : ",$scope.user);
+			console.log("$scope.user.name : ",$scope.user.name);
+
 		});
 	};
 
@@ -52,6 +50,7 @@ console.log("Auth Controller in the MainCtrl");
 			Auth.login($scope.user.email, $scope.user.password, function() {
 				$location.path('/');
 				$scope.$apply();
+				console.log("$scope.user : ",$scope.user);
 				console.log('before $scope.showLogin = true;');
 				$scope.showLogin = true;
 				console.log('after $scope.showLogin = true;');
