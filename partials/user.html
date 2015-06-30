@@ -30,26 +30,11 @@
 						<div class="col-md-8 user-profile">
 							<h1 class="logmein">Welcome {{ auth.password.email }}!</h1><br>
 
-							<h3>Here are the lessons you have already booked:</h3>
-							<div class="row" ng-repeat='lesson in lessons'>
-								<div class="col-md-3">
-									<p>{{lesson.title}}</p>
-								</div>
-								<div class="col-md-3">
-									<p>{{lesson.description}}</p>
-								</div>
-								<div class="col-md-3">
-									<p>{{lesson.instructor}}</p>
-								</div>
-								<div class="col-md-3">
-									<p>{{lesson.appointment}}</p>
-								</div>
-								<div class="col-md-3">
-									<button ng-click="deleteTodo()">Modify Lesson</button>
-									<button ng-click="deleteTodo()">Modify Appointment</button>
-									<button ng-click="deleteTodo()">Cancel Appointment</button>
-								</div>
-							</div>
+							<h3>What would you like to do?</h3><br><br>
+											<form role="form" novalidate name="userForm">
+												<button ng-click="lesson()" class="btn btn-primary">Book a lesson >></button>
+												<button ng-click="()" class="btn btn-primary">Show my lessons >></button>
+											</form>
 
 
 
