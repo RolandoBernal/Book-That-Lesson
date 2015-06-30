@@ -20,41 +20,37 @@
 		</div>
 	</nav>
 	<br><br><br><br><br>
-	<div class="container-fluid main-div" ng-controller="MainCtrl">
+	<div class="container-fluid main-div">
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
 					<div class="row div-background">
 						<div class="col-md-2"></div>
-						<div class="col-md-6 log-me-in"><h1 class="logmein">Welcome {{ auth.password.email }}!</h1><br>
+						<div class="col-md-8 user-profile">
+							<h1 class="logmein">Welcome {{ auth.password.email }}!</h1><br>
 
+							<h3>Here are the lessons you have already booked:</h3>
+							<div class="row" ng-repeat='lesson in lessons'>
+								<div class="col-md-3">
+									<p>{{lesson.title}}</p>
+								</div>
+								<div class="col-md-3">
+									<p>{{lesson.description}}</p>
+								</div>
+								<div class="col-md-3">
+									<p>{{lesson.instructor}}</p>
+								</div>
+								<div class="col-md-3">
+									<p>{{lesson.appointment}}</p>
+								</div>
+								<div class="col-md-3">
+									<button ng-click="deleteTodo()">Modify Lesson</button>
+									<button ng-click="deleteTodo()">Modify Appointment</button>
+									<button ng-click="deleteTodo()">Cancel Appointment</button>
+								</div>
+							</div>
 
-
-						    <!-- ACCOUNT PANEL -->
-						    <div class="panel" ng-show="authData" >
-						      <!-- Logged in user data -->
-						      <img ng-src="{{ authData.github.cachedUserProfile.avatar_url }}" />
-						      <p>
-						        {{ authData.github.displayName }} / <b><a href="{{ authData.github.cachedUserProfile.html_url }}">@{{ authData.github.username }}</a></b>
-						      </p>
-
-						      <!-- Logout button -->
-						      <button ng-click="logout()" class="btn btn-danger">Logout</button>
-						    </div>
-
-						    <!-- LESSON LIST -->
-						    <div class="panel" ng-show="authData">
-						      <h4>Your lessons booked</h4>
-
-						      <ul>
-						        <li class="list-group-item" ng-repeat="repo in repos">
-						          <a href="{{ repo.html_url }}">
-						            {{ repo.full_name }}
-						          </a>
-						        </li>
-						      </ul>
-						    </div>
 
 
 

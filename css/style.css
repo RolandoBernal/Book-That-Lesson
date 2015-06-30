@@ -39,6 +39,12 @@ body{
 	border-radius: 15px;
 }
 
+.user-profile {
+  height: 710px;
+  margin-top: -60px;
+}
+
+
 .logmein,
 .imnewhere,
 .expressappt {
