@@ -1,4 +1,4 @@
-	<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+	<nav role="navigation" class="navbar navbar-inverse navbar-fixed-top" ng-controller="MainCtrl">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -13,7 +13,7 @@
 				<ul class="nav navbar-nav">
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="user-nav">{{ auth.password.email }}</li>
+					<li class="user-nav"><h4>{{ username }}</h4></li>
 					<li class="logout-nav"><button ng-click="logout()" class="btn btn-danger">Logout</li>
 				</ul>
 			</div>
@@ -28,12 +28,33 @@
 					<div class="row div-background">
 						<div class="col-md-2"></div>
 						<div class="col-md-8 user-profile">
-							<h1 class="logmein">Welcome {{ auth.password.email }}!</h1><br>
+							<h1 class="logmein">Welcome {{ username }}!</h1><br>
+
+
+							<h3 class="logmein">These are your booked lessons:</h3><br>
+							<div class="row" ng-repeat='lesson in lessons'>
+								<div class="col-md-3">
+									<p>{{lesson.title}}</p>
+								</div>
+								<div class="col-md-3">
+									<p>{{lesson.description}}</p>
+								</div>
+								<div class="col-md-3">
+									<p>{{lesson.instructor}}</p>
+								</div>
+								<div class="col-md-3">
+									<p>{{lesson.appointment}}</p>
+								</div>
+								<div class="col-md-3">
+									<button ng-click="deleteTodo()">Modify Lesson</button>
+									<button ng-click="deleteTodo()">Modify Appointment</button>
+									<button ng-click="deleteTodo()">Cancel Appointment</button>
+								</div>
+							</div>
 
 							<h3>What would you like to do?</h3><br><br>
-											<form role="form" novalidate name="userForm">
-												<button ng-click="lesson()" class="btn btn-primary">Book a lesson >></button>
-												<button ng-click="()" class="btn btn-primary">Show my lessons >></button>
+											<form role="form" novalidate name="userForm" ng-controller="LessonCtrl">
+												<button ng-click="callLesson()" class="btn btn-primary">Book a new lesson >></button>
 											</form>
 
 

@@ -1,4 +1,4 @@
-app.controller('MainCtrl', ['$scope', 'Auth', '$location', '$rootScope', function($scope, Auth, $location, $http, $rootScope){
+app.controller('MainCtrl', ['$scope', 'Auth', '$location', '$rootScope', function($scope, Auth, $location, $rootScope){
 
 	// console.log("Main Controller.");
 
@@ -40,6 +40,7 @@ app.controller('MainCtrl', ['$scope', 'Auth', '$location', '$rootScope', functio
 			$scope.$apply();
 			console.log("$scope.user : ",$scope.user);
 			console.log("$scope.user.name : ",$scope.user.name);
+			$scope.userName();
 
 		});
 	};
@@ -47,15 +48,21 @@ app.controller('MainCtrl', ['$scope', 'Auth', '$location', '$rootScope', functio
 	$scope.register = function() {
 		console.log("You clicked the REGISTER button");
 		Auth.register($scope.user.email, $scope.user.password, function() {
-			Auth.login($scope.user.email, $scope.user.password, function() {
-				$location.path('/');
-				$scope.$apply();
-				console.log("$scope.user : ",$scope.user);
-				console.log('before $scope.showLogin = true;');
-				$scope.showLogin = true;
-				console.log('after $scope.showLogin = true;');
-				$scope.showRegister = false;
-				$scope.showExpress = false;
+			console.log($rootScope.auth)
+			var data = {name:$scope.user.name}
+			console.log(data)
+			Auth.addUserInfo($rootScope.auth.uid, data, function(){
+
+				Auth.login($scope.user.email, $scope.user.password, function() {
+					$location.path('/');
+					$scope.$apply();
+					console.log("$scope.user : ",$scope.user);
+					console.log('before $scope.showLogin = true;');
+					$scope.showLogin = true;
+					console.log('after $scope.showLogin = true;');
+					$scope.showRegister = false;
+					$scope.showExpress = false;
+				})
 			});
 		});
 	};
@@ -67,6 +74,16 @@ app.controller('MainCtrl', ['$scope', 'Auth', '$location', '$rootScope', functio
 			$scope.$apply();
 		});
 	};
+
+	$scope.userName = function (){
+		Auth.getName($rootScope.auth.uid, function(user2){
+			var objectUid = Object.keys(user2);
+			var stuff = user2[objectUid];
+			console.log('stuff', stuff.name);
+			$rootScope.username = stuff.name;
+
+		})
+	}
 
 
 }])

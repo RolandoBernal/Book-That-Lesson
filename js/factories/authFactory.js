@@ -1,4 +1,4 @@
-app.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope, $location, API_URL) {
+app.factory('Auth', ['$rootScope', '$location', 'API_URL', '$http', function($rootScope, $location, API_URL, $http) {
 
     console.log("Auth Controller in Auth Factory. ");
 
@@ -33,14 +33,31 @@ app.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope, 
         }
       })
     }
+
+
     function logout(cb) {
       fb.unauth(function() {
         $rootScope.auth = null;
         cb();
       })
     }
+
+    function addUserInfo(simpleLogin, data, cb) {
+      console.log('hit profile factory')
+      $http
+        .post(`${API_URL}/profile/${simpleLogin}.json`, data)
+        .success(cb);
+    }
+
+    function getName(simpleLogin, cb) {
+      console.log('hit username function')
+      $http
+        .get(`${API_URL}/profile/${simpleLogin}.json`)
+        .success(cb);
+    }
+
     function getAuth() {
       return fb.getAuth();
     }
-  return {login:login, register:register, logout:logout, getAuth:getAuth};
+  return {login:login, register:register, logout:logout, getAuth:getAuth, addUserInfo:addUserInfo, getName:getName};
   }]);
