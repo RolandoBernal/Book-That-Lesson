@@ -65,8 +65,8 @@
 }
 
 .wizard .wizard-inner ul li.complete {
-	color:#468847;
-	background:#f3f4f5;
+  color: #888;
+  background: #f3f4f5;
 }
 
 .wizard .wizard-inner ul li.complete:hover {
@@ -83,8 +83,8 @@
 }
 
 .wizard .wizard-inner ul li.active {
-	color:#58DDD1;
-	background:#d9edf7;
+  color: #1e73be;
+  background: #d9edf7;
 }
 
 .wizard .wizard-inner ul li.active .chevron:before {

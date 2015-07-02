@@ -159,3 +159,17 @@ a.list-group-item-heading {
   color: #337ab7;
 }
 
+
+/*.label-default {
+  margin-left: 44px;
+  background-color: #777;
+}*/
+
+.instructor-profile {
+	text-align: center;
+}
+
+.profile-details {
+	text-align: left;
+}
+

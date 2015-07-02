@@ -1,21 +1,7 @@
 
-app.controller('ScheduleCtrl', function($scope){
-	$scope.messageSchedule = "This is the SCHEDULE page";
-
-
-})
-
-
-
-
-
-
-
-
-
 // angular.module('myApp', ['firebase'])
 
-// .controller('scheduleController', function($scope, $firebase) {
+// app.controller('SchedCtrl', function($scope, $firebase) {
 
 // 	// get # of real time users
 // 	var listRef = new Firebase("https://burning-torch-4263.firebaseio.com/presence/");

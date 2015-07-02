@@ -29,6 +29,7 @@
     "bootstrap": "~3.3.4",
     "font-awesome": "~4.3.0",
     "firebase": "~2.2.7",
-    "angularfire": "~1.1.1"
+    "angularfire": "~1.1.1",
+    "eonasdan-bootstrap-datetimepicker": "~4.14.30"
   }
 }
