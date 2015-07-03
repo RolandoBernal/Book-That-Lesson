@@ -12,7 +12,7 @@ body{
 	color: #34495e;font-family: 'ABeeZee';size: 14px;}
 
 .main-div {
-	background: url(../img/BookThatLesson.jpg) no-repeat center center scroll;
+	background: url(../img/BookThatLesson.jpg) no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -171,5 +171,31 @@ a.list-group-item-heading {
 
 .profile-details {
 	text-align: left;
+}
+
+@media (min-width: 992px) {
+	.col-md-9 {
+  	width: 75%;
+  	padding-left: 8%;
+	}
+}
+
+.main-box .main-box-body {
+  /* padding: 0 20px 20px 20px; */
+  padding: 0px;
+}
+
+.text-info {
+  color: #31708f;
+}
+
+.lesson-selection {
+	font-size: 2em;
+}
+
+.select-lesson {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
 }
 
