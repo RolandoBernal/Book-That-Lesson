@@ -40,7 +40,7 @@ body{
 }
 
 .user-profile {
-  height: 710px;
+  height: 400px;
   margin-top: -60px;
 }
 
@@ -92,7 +92,8 @@ a.navbar-inverse:active {
 }
 
 .user-nav {
-	padding-right: 10px;
+	padding-right: 20px;
+	font-size: 2.2em;
 }
 
 .book-that-lesson {
@@ -187,6 +188,7 @@ a.list-group-item-heading {
 
 .text-info {
   color: #31708f;
+  margin-left: 250px;
 }
 
 .lesson-selection {
@@ -196,6 +198,14 @@ a.list-group-item-heading {
 .select-lesson {
   text-align: center;
   margin-top: 50px;
-  font-size: 20px;
+  /*font-size: 20px;*/
+}
+
+.main-box h2 {
+  font-size: 2em;
+  line-height: 29px;
+  /* margin: 0; */
+  padding: 0;
+  text-align: center;
 }
 
