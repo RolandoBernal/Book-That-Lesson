@@ -57,11 +57,12 @@
 																	</div>
 																</div>
 																<div class="step-content">
-																	<div class="step-pane active" id="step1">
+																<form role="form" novalidate name="userForm">
+																	<div class="step-pane active form-group" id="step1">
 																		<br>
 																			<fieldset class="select-lesson">
 																				<label for="lesson-selection"><h2>What are you looking for?</h2></label>
-																				<select id="lesson-selection" name="lesson-selection">
+																				<select id="title" name="title" ng-model="newLesson.title" autofocus="autofocus" required="required">
 																				<option value="swingEvaluation">Swing Evaluation</option>
 																					<optgroup label="Off the tee">
 																						<option value="driver">Driver</option>
@@ -74,13 +75,14 @@
 																					<option value="putting">Putting</option>
 																					<option value="fundamentals">Fundamentals</option>
 																				</select>
-																			</fieldset>
-																			<!-- <div class="select-lesson">
-																				<h3>You selected
-																			</div> -->
+																			</fieldset><br><br><br>
+																			<div class="form-group description">
+																				<label for="description"><h2>Description: (tell us a little bit what you want to fix)</h2></label><br>
+																				<input id="description" type="text" name="description" ng-model="newLesson.description" required="required" ng-minlength="3" class="form-control"/>
+																			</div>
 																	</div>
 
-																	<div class="step-pane" id="step2">
+																	<div class="step-pane form-group" id="step2">
 																		<br><h2>Who do you want to see?</h2><br>
 																		<div class="row instructor-profile">
 
@@ -114,16 +116,50 @@
 																							</ul>
 																							</div>
 																							<div class="profile-message-btn center-block text-center">
-																							<!-- <a href="#step3" class="btn btn-success">
+																							<a href="" class="btn btn-success">
 																							<i class="fa fa-check"></i>
 																							Select
-																							</a> -->
-																							<li data-target="#step3"><span class="btn btn-success"><i class="fa fa-check"></i>Select</span>
+																							</a><br><br>
 																							</div>
 																							</div>
 																							</div>
 
 																					</div>
+
+
+<!--         <fieldset>
+
+          <legend>Which product are you using?</legend>
+
+          <input type="radio" name="product-type" value="word">Word
+
+          <input type="radio" name="product-type" value="excel">Excel
+
+          <input type="radio" name="product-type" value="powerpoint">Powerpoint
+
+        </fieldset>   -->
+
+
+<!--
+
+
+<div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
+  </label>
+  <label class="btn btn-primary">
+    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
+  </label>
+</div>
+
+
+ -->
+
+
+
 																					<div class="col-md-4">
 
 																							<div class="main-box clearfix">
@@ -154,10 +190,10 @@
 																							</ul>
 																							</div>
 																							<div class="profile-message-btn center-block text-center">
-																							<a href="#step3" class="btn btn-success">
+																							<a href="" class="btn btn-success">
 																							<i class="fa fa-check"></i>
 																							Select
-																							</a>
+																							</a><br><br>
 																							</div>
 																							</div>
 																							</div>
@@ -193,10 +229,10 @@
 																							</ul>
 																							</div>
 																							<div class="profile-message-btn center-block text-center">
-																							<a href="#step3" class="btn btn-success">
+																							<a href="" class="btn btn-success">
 																							<i class="fa fa-check"></i>
 																							Select
-																							</a>
+																							</a><br><br>
 																							</div>
 																							</div>
 																							</div>
@@ -216,120 +252,16 @@
 																				<div class="container">
 																				    <div class="row">
 																				    	<div class="col-lg-1 col-md-1 ">
-																							  <table class="table table-bordered">
-																						    <thead>
-																						      <tr>
-																						        <th>Sunday</th>
-																						        <th>Monday</th>
-																						        <th>Tuesday</th>
-																						        <th>Wednesday</th>
-																						        <th>Thursday</th>
-																						        <th>Friday</th>
-																						        <th>Saturday</th>
-																						      </tr>
-																						    </thead>
-																						    <tbody>
-																						      <tr>
-																						        <td>07:00</td>
-																						        <td>07:00</td>
-																						        <td>07:00</td>
-																						        <td>07:00</td>
-																						        <td>07:00</td>
-																						        <td>07:00</td>
-																						        <td>07:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>08:00</td>
-																						        <td>08:00</td>
-																						        <td>08:00</td>
-																						        <td>08:00</td>
-																						        <td>08:00</td>
-																						        <td>08:00</td>
-																						        <td>08:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>09:00</td>
-																						        <td>09:00</td>
-																						        <td>09:00</td>
-																						        <td>09:00</td>
-																						        <td>09:00</td>
-																						        <td>09:00</td>
-																						        <td>09:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>10:00</td>
-																						        <td>10:00</td>
-																						        <td>10:00</td>
-																						        <td>10:00</td>
-																						        <td>10:00</td>
-																						        <td>10:00</td>
-																						        <td>10:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>11:00</td>
-																						        <td>11:00</td>
-																						        <td>11:00</td>
-																						        <td>11:00</td>
-																						        <td>11:00</td>
-																						        <td>11:00</td>
-																						        <td>11:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>12:00</td>
-																						        <td>12:00</td>
-																						        <td>12:00</td>
-																						        <td>12:00</td>
-																						        <td>12:00</td>
-																						        <td>12:00</td>
-																						        <td>12:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>13:00</td>
-																						        <td>13:00</td>
-																						        <td>13:00</td>
-																						        <td>13:00</td>
-																						        <td>13:00</td>
-																						        <td>13:00</td>
-																						        <td>13:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>14:00</td>
-																						        <td>14:00</td>
-																						        <td>14:00</td>
-																						        <td>14:00</td>
-																						        <td>14:00</td>
-																						        <td>14:00</td>
-																						        <td>14:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>15:00</td>
-																						        <td>15:00</td>
-																						        <td>15:00</td>
-																						        <td>15:00</td>
-																						        <td>15:00</td>
-																						        <td>15:00</td>
-																						        <td>15:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>16:00</td>
-																						        <td>16:00</td>
-																						        <td>16:00</td>
-																						        <td>16:00</td>
-																						        <td>16:00</td>
-																						        <td>16:00</td>
-																						        <td>16:00</td>
-																						      </tr>
-																						      <tr>
-																						        <td>17:00</td>
-																						        <td>17:00</td>
-																						        <td>17:00</td>
-																						        <td>17:00</td>
-																						        <td>17:00</td>
-																						        <td>17:00</td>
-																						        <td>17:00</td>
-																						      </tr>
-																						    </tbody>
-																						  </table>
+
+
+<!-- CALENDAR WEEK VIEW -->
+
+
+
+<!-- END CALENDAR WEEK VIEW -->
+
+
+
 																						</div>
 																					</div>
 
@@ -340,15 +272,53 @@
 
 																	</div>
 
-																	<div class="step-pane" id="step4">
+																	<div class="step-pane review" id="step4">
 																	<br>
 																	<h4>Review your appointment</h4>
 																		<div>
 																			<div>
-																				<form role="form" novalidate name="userForm">
+																					<p><h2>{{username}},</h2></p>
+																					<h3>
+																					<p>Your appointment to work on {{lesson.title}}</p>
+																					<p>to fix your {{lesson.description}}</p>
+																					<p>with instructor {{lesson.instructor}}</p>
+																					<p>on {{lesson.appointment}} is ready!</p>
+																					</h3>
+																			</div>
+																		</div>
+																	</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+<!-- END breadcrumb BAR -->
+
+
+								</div>
+								<div class="col-md-1"></div>
+							</div>
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<!-- 																				<form role="form" novalidate name="userForm">
 																					<div class="form-group">
 																						<label for="title">What do you want to learn?</label>
-																						<!-- <input id="title" type="text" name="title" ng-model="newLesson.title" autofocus="autofocus" required="required" ng-minlength="3" class="form-control"/> -->
+																						<input id="title" type="text" name="title" ng-model="newLesson.title" autofocus="autofocus" required="required" ng-minlength="3" class="form-control"/>
 																						<fieldset class="select-lesson">
 																							<label for="lesson-selection"><h2>What are you looking for?</h2></label>
 																							<select id="title" name="title" ng-model="newLesson.title" autofocus="autofocus" required="required">
@@ -379,38 +349,7 @@
 																						<input id="appointment" type="date" name="appointment" ng-model="newLesson.appointment" required="required" ng-minlength="3" class="form-control"/>
 																					</div>
 																					<button ng-click="addLesson()" class="btn btn-primary">Book It! >></button>
-																				</form>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-
-<!-- END breadcrumb BAR -->
-
-
-								</div>
-								<div class="col-md-1"></div>
-							</div>
-
-
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
+																				</form> -->
 
 
 

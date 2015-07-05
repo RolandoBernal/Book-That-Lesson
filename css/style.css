@@ -9,7 +9,18 @@
 
 body{
 	/*background: #ffffff;*/
-	color: #34495e;font-family: 'ABeeZee';size: 14px;}
+	color: #34495e;font-family: 'ABeeZee';size: 14px;
+/*	background: url(../img/BookThatLesson.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	position:absolute;
+		top:0;
+	right:0;
+	bottom:0;
+	left:0;*/
+}
 
 .main-div {
 	background: url(../img/BookThatLesson.jpg) no-repeat center;
@@ -19,7 +30,7 @@ body{
 	-o-background-size: cover;
 	filter: Alpha(Opacity=0);
 	position:fixed !important;
-	position:absolute;
+	/*position:absolute;*/
 	top:0;
 	right:0;
 	bottom:0;
@@ -131,8 +142,8 @@ a:focus {
 /* Footer Style */
 
 footer {
-	position: relative;
-	top: 615px;
+/*	position: relative;
+	top: 615px;*/
 	color: #1e73be;
 	background-color: rgba(255,255,255,0.4);
 }
@@ -207,5 +218,28 @@ a.list-group-item-heading {
   /* margin: 0; */
   padding: 0;
   text-align: center;
+}
+
+.description {
+  width: 60%;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+input, button, select, textarea {
+  font-size: 20px;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #1e73be;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+
+.review {
+	padding-left: 20%;
 }
 
