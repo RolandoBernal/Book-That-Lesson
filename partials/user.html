@@ -43,7 +43,7 @@
 										        <th>Appointment</th>
 										      </tr>
 										    </thead>
-										    <tbody class="row log-me-in" ng-repeat='lesson in lessons track by $index'>
+										    <tbody class="row" ng-repeat='lesson in lessons track by $index'>
 										      <tr>
 										        <td>{{lesson.title}}</td>
 										        <td>{{lesson.description}}</td>
@@ -59,11 +59,11 @@
 									</div> <!-- END of Panel -->
 								</div> <!-- END of User Profile -->
 						</div>
-						<div class="row">
+						<div class="row book-that-lesson">
 							<h3>Let's Book That Lesson!</h3><br><br>
 							<form role="form" novalidate name="userForm" ng-controller="LessonCtrl">
 								<button ng-click="callLesson()" class="btn btn-primary">Book a new lesson >></button>
-							</form>
+							</form><br><br>
 						</div>
 					</div> <!-- END of col-md-10 -->
 				<div class="col-md-1"></div>
