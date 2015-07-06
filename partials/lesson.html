@@ -144,7 +144,7 @@
 																				<div class="col-md-4 col-lg-4">
 																					<div class="main-box clearfix">
 																								<header class="main-box-header clearfix">
-																									<h2>Angelina jolie</h2>
+																									<h2>Angelina Jolie</h2>
 																								</header>
 																							<div class="main-box-body clearfix">
 																								<img src="img/AngelinaJolie.png" alt="" class="profile-img img-responsive center-block">
@@ -222,7 +222,44 @@
 <!-- This is the breadcrum bar's STEP 3 -->
 <!-- CALENDAR/APPOINTMENT -->
 
+																	<div class="step-pane" id="step3">
+																	<br>
+																		<p class="text-center select-lesson"><h2>What time would you like to meet?</h2><br><strong class="text-info">Quick! Other people are booking times too!</strong></p>
+																		  <div class="row times">
+																				<div class="container">
+																				    <div class="row">
+																				    	<div class="col-lg-1 col-md-1 ">
 
+<!-- CALENDAR WEEK VIEW -->
+
+																							<div class="container" ng-controller="SchedCtrl">
+																								<div class="page-header text-center">
+																									<h1>Angelina Jolie's schedule</h1>
+																								</div>
+																								<div class="row times">
+																									<div class="col-xs-4 text-center" ng-repeat="day in days">
+																										<h2>{{ day.name }}</h2>
+																										<div class="time-slot" ng-repeat="slot in day.slots">
+																											<input type="checkbox" id="{{ day.name }}-{{ $index }}" ng-model="slot.booked" ng-disabled="slot.booked">
+																											<label for="{{ day.name }}-{{ $index }}">{{ slot.time }}<br>
+																												<span ng-if="slot.booked">Booked</span>
+																												<span ng-if="!slot.booked">Available</span>
+																											</label>
+																										</div>
+																									</div>
+																								</div>
+																								<p class="text-center">
+																									<a href="#" ng-click="reset()" class="btn btn-primary">Select</a>
+																								</p>
+																							</div>
+
+<!-- END CALENDAR WEEK VIEW -->
+
+																						</div>
+																					</div>
+																					</div>
+																				</div>
+																	</div>
 
 
 
