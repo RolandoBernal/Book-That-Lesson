@@ -171,15 +171,16 @@ a.list-group-item-heading {
   color: #337ab7;
 }
 
-
-/*.label-default {
-  margin-left: 44px;
-  background-color: #777;
-}*/
-
 .instructor-profile {
 	text-align: center;
+	width: 100%;
 }
+
+.profile-details>ul {
+	/*text-align: center;*/
+	width: 100%;
+}
+
 
 .profile-details {
 	text-align: left;
@@ -243,3 +244,86 @@ input, button, select, textarea {
 	padding-left: 20%;
 }
 
+
+/* Interaction states
+----------------------------------*/
+
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+.ui-state-primary,
+.ui-widget-content .ui-state-primary,
+.ui-widget-header .ui-state-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited {
+	color: #555555;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+	border: 1px solid #fff;
+	font-weight: normal;
+	color: #fff;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited {
+	color: #212121;
+	text-decoration: none;
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  border: 1px solid #fff;
+  font-weight: normal;
+  color: #fff;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #212121;
+	text-decoration: none;
+}
+
+.img,
+.img-responsive {
+	width: 180px;
+  height: 180px;
+}

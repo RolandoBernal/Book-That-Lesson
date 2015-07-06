@@ -44,6 +44,10 @@
 													<div class="main-box clearfix" style="min-height: 820px;">
 														<div class="main-box-body clearfix">
 															<div id="myWizard" class="wizard">
+
+
+<!-- This is the breadcrum bar's header/navigation buttons -->
+
 																<div class="wizard-inner">
 																	<ul class="steps" style="margin-left: 0">
 																	<li data-target="#step1" class="active"><span class="badge badge-success">1</span>LESSON<span class="chevron"></span></li>
@@ -56,6 +60,11 @@
 																		<button type="button" class="btn btn-success btn-mini btn-next" data-last="Book It!">Next<i class="icon-arrow-right"></i></button>
 																	</div>
 																</div>
+
+<!-- ENDS the breadcrum bar's header/navigation buttons -->
+
+<!-- This is the breadcrum bar's STEP 1 -->
+
 																<div class="step-content">
 																<form role="form" novalidate name="userForm">
 																	<div class="step-pane active form-group" id="step1">
@@ -82,213 +91,144 @@
 																			</div>
 																	</div>
 
+<!-- ENDS the breadcrum bar's STEP 1 -->
+
+
+<!-- This is the breadcrum bar's STEP 2 -->
+
+
 																	<div class="step-pane form-group" id="step2">
 																		<br><h2>Who do you want to see?</h2><br>
-																		<div class="row instructor-profile">
-
-																					<div class="col-md-4">
-
+																		<div class="row instructor-profile btn-group" data-toggle="buttons">
+																			<script>
+																			$(function() {
+																				$( "#radio" ).buttonset();
+																			});
+																			</script>
+																			<div id="radio" class="ui-buttonset">
+																				<div class="col-md-4 col-lg-4">
 																							<div class="main-box clearfix">
-																							<header class="main-box-header clearfix">
-																							<h2>Jennifer Lawrence</h2>
-																							</header>
+																								<header class="main-box-header clearfix">
+																									<h2>B, Lando B</h2>
+																								</header>
 																							<div class="main-box-body clearfix">
-																							<img src="img/scarlet-159.png" alt="" class="profile-img img-responsive center-block">
-																							<div class="profile-label">
-																							<span class="label label-default">Certified Golf Coach</span>
+																								<img src="img/BLandoB.png" alt="" class="profile-img img-responsive center-block">
+																								<div class="profile-label">
+																									<span class="label label-default">Certified Golf Assistant Coach</span>
+																								</div>
+																								<div class="profile-stars">
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<span>Teaching Skills</span>
+																								</div>
+																								<div class="profile-since">
+																									Member since: Dec 2013
+																								</div>
+																								<div class="profile-details">
+																									<ul class="fa-ul">
+																										<li><i class="fa-li fa fa-trophy"></i>Awards: <span>4</span></li>
+																										<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
+																										<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
+																									</ul>
+																								</div>
+																								<div class="profile-message-btn center-block text-center">
+																									<input type="radio" id="radio1" name="radio" checked="checked" class="ui-helper-hidden-accessible form-control" ng-model="newLesson.instructor" required="required"><label for="radio1" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left ui-corner-right ui-state-active" role="button" aria-pressed="true"><span class="ui-button-text">Select</span></label>
+																									<br><br>
+																								</div><br><br><br>
 																							</div>
-																							<div class="profile-stars">
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star-o"></i>
-																							<span>Teaching Skills</span>
-																							</div>
-																							<div class="profile-since">
-																							Member since: Dec 2005
-																							</div>
-																							<div class="profile-details">
-																							<ul class="fa-ul">
-																								<li><i class="fa-li fa fa-trophy"></i>Awards: <span>4</span></li>
-																								<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
-																								<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
-																							</ul>
-																							</div>
-																							<div class="profile-message-btn center-block text-center">
-																							<a href="" class="btn btn-success">
-																							<i class="fa fa-check"></i>
-																							Select
-																							</a><br><br>
-																							</div>
-																							</div>
-																							</div>
-
-																					</div>
-
-
-<!--         <fieldset>
-
-          <legend>Which product are you using?</legend>
-
-          <input type="radio" name="product-type" value="word">Word
-
-          <input type="radio" name="product-type" value="excel">Excel
-
-          <input type="radio" name="product-type" value="powerpoint">Powerpoint
-
-        </fieldset>   -->
-
-
-<!--
-
-
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1 (preselected)
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
-  </label>
-</div>
-
-
- -->
-
-
-
-																					<div class="col-md-4">
-
-																							<div class="main-box clearfix">
-																							<header class="main-box-header clearfix">
-																							<h2>Jennifer Lawrence</h2>
-																							</header>
-																							<div class="main-box-body clearfix">
-																							<img src="img/scarlet-159.png" alt="" class="profile-img img-responsive center-block">
-																							<div class="profile-label">
-																							<span class="label label-default">Certified Golf Assistant Coach</span>
-																							</div>
-																							<div class="profile-stars">
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star-o"></i>
-																							<i class="fa fa-star-o"></i>
-																							<span>Teaching Skills</span>
-																							</div>
-																							<div class="profile-since">
-																							Member since: Jan 2015
-																							</div>
-																							<div class="profile-details">
-																							<ul class="fa-ul">
-																								<li><i class="fa-li fa fa-trophy"></i>Awards: <span>1</span></li>
-																								<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
-																								<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
-																							</ul>
-																							</div>
-																							<div class="profile-message-btn center-block text-center">
-																							<a href="" class="btn btn-success">
-																							<i class="fa fa-check"></i>
-																							Select
-																							</a><br><br>
-																							</div>
-																							</div>
-																							</div>
-
-																					</div>
-																					<div class="col-md-4">
-
-																							<div class="main-box clearfix">
-																							<header class="main-box-header clearfix">
-																							<h2>Jennifer Lawrence</h2>
-																							</header>
-																							<div class="main-box-body clearfix">
-																							<img src="img/scarlet-159.png" alt="" class="profile-img img-responsive center-block">
-																							<div class="profile-label">
-																							<span class="label label-default">Certified Golf Coach</span>
-																							</div>
-																							<div class="profile-stars">
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star"></i>
-																							<i class="fa fa-star-o"></i>
-																							<span>Teaching Skills</span>
-																							</div>
-																							<div class="profile-since">
-																							Member since: Jun 2014
-																							</div>
-																							<div class="profile-details">
-																							<ul class="fa-ul">
-																								<li><i class="fa-li fa fa-trophy"></i>Awards: <span>3</span></li>
-																								<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
-																								<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
-																							</ul>
-																							</div>
-																							<div class="profile-message-btn center-block text-center">
-																							<a href="" class="btn btn-success">
-																							<i class="fa fa-check"></i>
-																							Select
-																							</a><br><br>
-																							</div>
-																							</div>
-																							</div>
-
-																					</div>
-
-																		</div>
-																	</div>
-
-																	<div class="step-pane" id="step3">
-																	<br>
-
-																		<p class="text-center select-lesson"><h2>What time would you like to meet?</h2><br><strong class="text-info">Quick! Other people are booking times too!</strong></p>
-
-																		  <div class="row times">
-
-																				<div class="container">
-																				    <div class="row">
-																				    	<div class="col-lg-1 col-md-1 ">
-
-
-<!-- CALENDAR WEEK VIEW -->
-
-
-
-<!-- END CALENDAR WEEK VIEW -->
-
-
-
 																						</div>
-																					</div>
-
-
-																					</div>
 																				</div>
+																				<div class="col-md-4 col-lg-4">
+																					<div class="main-box clearfix">
+																								<header class="main-box-header clearfix">
+																									<h2>Angelina jolie</h2>
+																								</header>
+																							<div class="main-box-body clearfix">
+																								<img src="img/AngelinaJolie.png" alt="" class="profile-img img-responsive center-block">
+																								<div class="profile-label">
+																									<span class="label label-default">Certified Golf Assistant Coach</span>
+																								</div>
+																								<div class="profile-stars">
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star-o"></i>
+																									<span>Teaching Skills</span>
+																								</div>
+																								<div class="profile-since">
+																									Member since: Jan 2001
+																								</div>
+																								<div class="profile-details">
+																									<ul class="fa-ul">
+																										<li><i class="fa-li fa fa-trophy"></i>Awards: <span>7</span></li>
+																										<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
+																										<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
+																									</ul>
+																								</div>
+																								<div class="profile-message-btn center-block text-center">
+																									<input type="radio" id="radio2" name="radio" class="ui-helper-hidden-accessible form-control" ng-model="newLesson.instructor" required="required"><label for="radio2" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left ui-corner-right" role="button" aria-pressed="false"><span class="ui-button-text">Select</span></label>
+																									<br><br>
+																								</div><br><br><br>
+																							</div>
+																						</div>
+																				</div>
+																				<div class="col-md-4 col-lg-4">
+																					<div class="main-box clearfix">
+																								<header class="main-box-header clearfix">
+																									<h2>Mila Kunis</h2>
+																								</header>
+																							<div class="main-box-body clearfix">
+																								<img src="img/kunis-300.jpg" alt="" class="profile-img img-responsive center-block">
+																								<div class="profile-label">
+																									<span class="label label-default">Certified Golf Assistant Coach</span>
+																								</div>
+																								<div class="profile-stars">
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star"></i>
+																									<i class="fa fa-star-o"></i>
+																									<i class="fa fa-star-o"></i>
+																									<span>Teaching Skills</span>
+																								</div>
+																								<div class="profile-since">
+																									Member since: Apr 2010
+																								</div>
+																								<div class="profile-details">
+																									<ul class="fa-ul">
+																										<li><i class="fa-li fa fa-trophy"></i>Awards: <span>2</span></li>
+																										<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
+																										<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
+																									</ul>
+																								</div>
+																								<div class="profile-message-btn center-block text-center">
+																									<input type="radio" id="radio3" name="radio" class="ui-helper-hidden-accessible form-control" ng-model="newLesson.instructor" required="required"><label for="radio3" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left ui-corner-right" role="button" aria-pressed="false"><span class="ui-button-text">Select</span></label>
+																									<br><br>
+																								</div><br><br><br>
+																							</div>
+																						</div>
 
-
-																	</div>
-
-																	<div class="step-pane review" id="step4">
-																	<br>
-																	<h4>Review your appointment</h4>
-																		<div>
-																			<div>
-																					<p><h2>{{username}},</h2></p>
-																					<h3>
-																					<p>Your appointment to work on {{lesson.title}}</p>
-																					<p>to fix your {{lesson.description}}</p>
-																					<p>with instructor {{lesson.instructor}}</p>
-																					<p>on {{lesson.appointment}} is ready!</p>
-																					</h3>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
-																	</form>
-																</div>
+
+
+<!-- ENDS the breadcrum bar's STEP 2 -->
+
+<!-- This is the breadcrum bar's STEP 3 -->
+<!-- CALENDAR/APPOINTMENT -->
+
+
+
+
+
+
+<!-- ENDS the breadcrum bar's STEP 3 -->
+
 															</div>
 														</div>
 													</div>
