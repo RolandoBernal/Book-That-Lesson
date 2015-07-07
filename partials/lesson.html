@@ -224,36 +224,29 @@
 
 																	<div class="step-pane" id="step3">
 																	<br>
-																  <script>
-																	  $(function() {
-																	    $( "#datepicker" ).datepicker();
-																	  });
-																  </script>
 																		<p class="text-center select-lesson"><h2>What time would you like to meet?</h2><br><strong class="text-info">Quick! Other people are booking times too!</strong></p>
 																		  <div class="row times">
 																				<div class="container">
-																				    <div class="row">
-																				    	<div class="col-lg-1 col-md-1 "></div>
-																				    	<div class="col-lg-5 col-md-5">
+																			    <div class="row">
+																			    	<div class="col-lg-1 col-md-1 "></div>
+																			    	<div class="col-lg-5 col-md-5">
 																								<!-- CALENDAR VIEW -->
-																								<div class="form-group">
-																									<label for="appointments">Select your appointment date:</label>
-																									<input id="appointment" type="date" name="appointment" ng-model="newLesson.appointment_date" required="required" ng-minlength="3" class="form-control"/>
-																								</div>
-
-
+																									<form name="timepickerForm" class="form-inline" role="form">
+																									  <!-- Datetime example -->
+																									  <div class="form-group">
+																									    <label class="control-label"><i class="fa fa-calendar"></i> Select Date:</label><br>
+																									    <div class="form-group">
+																									      <input type="text" size="10" class="form-control" ng-model="sharedDate" data-autoclose="1" placeholder="Date" bs-datepicker>
+																									    </div>
+																									    <label class="control-label"><i class="fa fa-clock-o"></i> Select Time:</label><br>
+																									    <div class="form-group">
+																									      <input type="text" size="8" class="form-control" ng-model="sharedDate" data-time-format="h:mm:ss a" data-autoclose="1" placeholder="Time" bs-timepicker>
+																									    </div>
+																									  </div>
+																									</form>
 																						</div>
 																						<div class="col-lg-5 col-md-5">
-																							<fieldset class="select-lesson">
-																								<label for="time-selection"><h2>Time:</h2></label>
-																								<select id="appointment_time" name="appointment_time" ng-model="newLesson.appointment_time" autofocus="autofocus" required="required">
-																									<option value="700">7:00 am</option>
-																									<option value="800">8:00 pm</option>
-																									<option value="Bunkers">Bunkers</option>
-																									<option value="putting">Putting</option>
-																									<option value="fundamentals">Fundamentals</option>
-																								</select>
-																							</fieldset><br><br><br>
+
 
 																						</div>
 																						<div class="col-lg-1 col-md-1"></div>
@@ -278,7 +271,7 @@
 																					<p>Your appointment to work on {{newLesson.title}}</p>
 																					<p>to fix your {{newLesson.description}}</p>
 																					<p>with instructor {{newLesson.instructor}}</p>
-																					<p>on {{newLesson.appointment_date}} {{newLesson.appontment_time}} is ready!</p>
+																					<p>on {{newLesson.appointment_date}} {{newLesson.appointment_time.text}} is ready!</p>
 																					</h3>
 																			</div>
 																			<div class="col-lg-1 col-md-1"></div>
@@ -314,6 +307,9 @@
 			</div>
 		</div>
 	</div>
+
+
+
 
 
 

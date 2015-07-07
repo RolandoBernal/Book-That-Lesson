@@ -688,7 +688,7 @@
 																									</div>
 																								</div> -->
 																								<!-- END CALENDAR VIEW -->
-
+<!--
 																								// <script>
 																								// $(function() {
 																								// 	$( "#selectable" ).selectable({
@@ -702,6 +702,7 @@
 																								// 	});
 																								// });
 																								// </script>
+																								 -->
 																								<!-- <ol id="selectable" class="ui-selectable">
 																									<li class="ui-widget-content ui-selectee">7:00 am</li>
 																									<li class="ui-widget-content ui-selectee">8:00 am</li>
@@ -718,6 +719,40 @@
 																								<p id="feedback">
 																								<span id="select-result"> 3:00 pm</span>.
 																								</p> -->
+<!--
+																																								  <script>
+																	  $(function() {
+																	    $( "#datepicker" ).datepicker();
+																	  });
+																  </script>
+
+																   -->
+
+
+																								<div class="form-group">
+																									<label for="appointments">Select your appointment date:</label>
+																									<input id="appointment" type="date" name="appointment_date" ng-model="newLesson.appointment_date" required="required" ng-minlength="3" class="form-control"/>
+																								</div>
+
+
+
+
+																   																							<fieldset class="select-lesson">
+																								<label for="time-selection"><h2>Time:</h2></label>
+																								<select id="appointment_time" name="appointment_time" ng-model="newLesson.appointment_time" autofocus="autofocus" required="required">
+																									<option value="700">7:00 am</option>
+																									<option value="800">8:00 am</option>
+																									<option value="900">9:00 am</option>
+																									<option value="1000">10:00 am</option>
+																									<option value="1100">11:00 am</option>
+																									<option value="1200">12:00 pm</option>
+																									<option value="100">1:00 pm</option>
+																									<option value="200">2:00 pm</option>
+																									<option value="300">3:00 pm</option>
+																									<option value="400">4:00 pm</option>
+																									<option value="500">5:00 pm</option>
+																								</select>
+																							</fieldset><br><br><br>
 
 
 
