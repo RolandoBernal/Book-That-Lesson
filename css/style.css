@@ -340,7 +340,7 @@ input, button, select, textarea {
 .div-background-color {
 	 /*position: relative;*/
   /*overflow: hidden;*/
-  background-color: rgba(249, 249, 249, 0.7);
+  background-color: rgba(249, 249, 249, 0.4);
   border: 1px solid rgba(212, 212, 212, 0.7);
   border-radius: 15px;
   height: 630px;
