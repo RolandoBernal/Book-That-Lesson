@@ -243,8 +243,8 @@
 																									      <input type="text" size="8" class="form-control" ng-model="newLesson.appointment_time" data-time-format="h:mm:ss a" data-autoclose="1" placeholder="hh:mm" bs-timepicker>
 																									    </div>
 																									    <div>
-																									    	<p>Your date: {{ newLesson.appoinment_date }}</p>
-																									    	<p>Your time: {{ newLesson.appoinment_time }}</p>
+																									    	<p>Your date: {{newLesson.appoinment_date}}</p>
+																									    	<p>Your time: {{newLesson.appoinment_time}}</p>
 																									    </div>
 																									  </div>
 																									</form>
@@ -274,7 +274,7 @@
 																					<p>on <strong>{{newLesson.appointment_date}}</strong> at <strong>{{newLesson.appointment_time}}</strong> is ready!</p>
 																					</h3>
 																					<div>
-																						<button ng-click="addLesson()" class="btn btn-primary">Book It! >></button>
+																						<button ng-click="addLesson()" class="btn btn-large btn-primary">Book It! >></button>
 																					</div>
 																			</div>
 																			<div class="col-lg-1 col-md-1"></div>
