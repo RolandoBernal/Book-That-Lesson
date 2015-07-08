@@ -229,7 +229,23 @@
 																									    </div>
 																									    <label class="control-label"><i class="fa fa-clock-o"></i> Select Time:</label><br>
 																									    <div class="form-group">
-																									      <input type="time" size="8" class="form-control" ng-model="newLesson.appointment_time" data-time-format="h:mm" data-autoclose="1" placeholder="hh:mm" bs-timepicker>
+																									    <fieldset class="select-lesson">
+																												<label for="time-selection"><h2>Time:</h2></label>
+																												<select id="appointment_time" name="appointment_time" ng-model="newLesson.appointment_time" autofocus="autofocus" required="required">
+																													<option value="7:00 AM">7:00 am</option>
+																													<option value="8:00 AM">8:00 am</option>
+																													<option value="9:00 AM">9:00 am</option>
+																													<option value="10:00 AM">10:00 am</option>
+																													<option value="11:00 AM">11:00 am</option>
+																													<option value="12:00 PM">12:00 pm</option>
+																													<option value="1:00 PM">1:00 pm</option>
+																													<option value="2:00 PM">2:00 pm</option>
+																													<option value="3:00 PM">3:00 pm</option>
+																													<option value="4:00 PM">4:00 pm</option>
+																													<option value="5:00 PM">5:00 pm</option>
+																												</select>
+																											</fieldset><br><br><br>
+																									      <!-- <input type="time" size="8" class="form-control" ng-model="newLesson.appointment_time" data-time-format="h:mm" data-autoclose="1" placeholder="hh:mm" bs-timepicker> -->
 																									    </div>
 																									  </div>
 																									</form>
