@@ -8,18 +8,8 @@
 /* Global Styles */
 
 body{
-	/*background: #ffffff;*/
+	background: #1e73be;
 	color: #34495e;font-family: 'ABeeZee';size: 14px;
-/*	background: url(../img/BookThatLesson.jpg) no-repeat center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-	position:absolute;
-		top:0;
-	right:0;
-	bottom:0;
-	left:0;*/
 }
 
 .main-div {
@@ -93,6 +83,10 @@ a.navbar-inverse:active {
 	color: #34495e;
 }
 
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: #fff;
+}
+
 @media (min-width: 768px) {
 	.navbar-right {
 	  float: right !important;
@@ -142,8 +136,6 @@ a:focus {
 /* Footer Style */
 
 footer {
-/*	position: relative;
-	top: 615px;*/
 	color: #1e73be;
 	background-color: rgba(255,255,255,0.4);
 }
@@ -156,7 +148,6 @@ footer {
   margin-bottom: -1px;
   background-color: rgba(255,255,255,0.2);
   border: none;
-  /* 1px solid rgba(255,255,255,0.2);*/
 }
 
 a.list-group-item .list-group-item-heading {
@@ -177,7 +168,6 @@ a.list-group-item-heading {
 }
 
 .profile-details>ul {
-	/*text-align: center;*/
 	width: 100%;
 }
 
@@ -194,7 +184,6 @@ a.list-group-item-heading {
 }
 
 .main-box .main-box-body {
-  /* padding: 0 20px 20px 20px; */
   padding: 0px;
 }
 
@@ -210,13 +199,12 @@ a.list-group-item-heading {
 .select-lesson {
   text-align: center;
   margin-top: 50px;
-  /*font-size: 20px;*/
+  font-size: 20px;
 }
 
 .main-box h2 {
   font-size: 2em;
   line-height: 29px;
-  /* margin: 0; */
   padding: 0;
   text-align: center;
 }
@@ -340,12 +328,10 @@ input, button, select, textarea {
 
 
 .div-background-color {
-	 /*position: relative;*/
-  /*overflow: hidden;*/
   background-color: rgba(249, 249, 249, 0.4);
   border: 1px solid rgba(212, 212, 212, 0.7);
   border-radius: 15px;
-  height: 730px;
+  height: 640px;
 }
 
 .panel {
@@ -361,6 +347,13 @@ input, button, select, textarea {
   background-color: rgba(249, 249, 249, 0.4);
   border-radius: 5px;
   text-align: center;
+  margin-top: 35px;
+  position: relative;
+  top: 60px;
+}
+
+.book-it {
+	text-align: center;
 }
 
 #feedback {
@@ -398,3 +391,156 @@ input, button, select, textarea {
 .select-lesson {
   font-size: 20px;
 }
+
+/* Calendar Style
+----------------------------------*/
+
+.ui-datepicker,
+.ui-datepicker table,
+.ui-datepicker tr,
+.ui-datepicker td,
+.ui-datepicker th {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-spacing: 0;
+}
+
+.ui-datepicker {
+    display: none;
+    width: 294px;
+    padding: 35px;
+    cursor: default;
+
+    text-transform: uppercase;
+    font-family: Tahoma;
+    font-size: 12px;
+
+    background: #a6c9e2;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    -webkit-box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
+    -moz-box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
+    box-shadow: 0px 1px 1px rgba(255,255,255, .1), inset 0px 1px 1px rgb(0,0,0);
+}
+
+.ui-datepicker-header {
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.ui-datepicker-title { text-align: center; }
+
+.ui-datepicker-month {
+    position: relative;
+    padding-right: 15px;
+    color: #565656;
+}
+
+.ui-datepicker-year {
+    padding-left: 8px;
+    color: #a8a8a8;
+}
+
+.ui-datepicker-month:before {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    content: '';
+
+    background: #a5cd4e;
+    background: -moz-linear-gradient(top, #a5cd4e 0%, #6b8f1a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a));
+    background: -webkit-linear-gradient(top, #a5cd4e 0%,#6b8f1a 100%);
+    background: -o-linear-gradient(top, #a5cd4e 0%,#6b8f1a 100%);
+    background: -ms-linear-gradient(top, #a5cd4e 0%,#6b8f1a 100%);
+    background: linear-gradient(top, #a5cd4e 0%,#6b8f1a 100%);
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    position: absolute;
+    top: -2px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.ui-datepicker-prev {
+    left: 0;
+    padding-left: 0;
+}
+
+.ui-datepicker-next {
+    right: 0;
+    padding-right: 0;
+}
+
+.ui-datepicker-prev span,
+.ui-datepicker-next span{
+    display: block;
+    width: 5px;
+    height: 10px;
+    text-indent: -9999px;
+
+    background-image: url(../img/arrows.png);
+}
+
+.ui-datepicker-prev span { background-position: 0px 0px; }
+
+.ui-datepicker-next span { background-position: -5px 0px; }
+
+.ui-datepicker-prev-hover span { background-position: 0px -10px; }
+
+.ui-datepicker-next-hover span { background-position: -5px -10px; }
+
+.ui-datepicker-calendar th {
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    text-align: center;
+    font-weight: normal;
+    color: #a8a8a8;
+}
+
+.ui-datepicker-calendar td {
+    padding: 0 7px;
+
+    text-align: center;
+    line-height: 26px;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    display: block;
+    width: 26px;
+    outline: none;
+
+    text-decoration: none;
+    color: #a8a8a8;
+
+    border: 1px solid transparent;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    color: #6a9113;
+    border: 1px solid #6a9113;
+}
+
+.ui-datepicker-other-month .ui-state-default { color: #565656; }
+
+
+
+
+
+
+
