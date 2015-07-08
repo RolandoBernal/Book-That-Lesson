@@ -86,6 +86,8 @@ app.controller('MainCtrl', ['$scope', 'Auth', '$location', '$rootScope', functio
 	}
 
 
+
+
 }])
 
 

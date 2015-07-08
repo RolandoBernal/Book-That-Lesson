@@ -99,16 +99,17 @@
 
 																	<div class="step-pane form-group" id="step2">
 																		<br><h2>Who do you want to see?</h2><br>
+
+
+
+														           <div>currently selected: {{newLesson.instructor}}</div>
+
 																		<div class="row instructor-profile btn-group" data-toggle="buttons">
-																			<script>
-																			$(function() {
-																				$( "#radio" ).buttonset();
-																			});
-																			</script>
 																			<div id="radio" class="ui-buttonset">
 																				<div class="col-md-4 col-lg-4">
 																							<div class="main-box clearfix">
 																								<header class="main-box-header clearfix">
+																								<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="LandoB"/> Select</label>
 																									<h2>B, Lando B</h2>
 																								</header>
 																							<div class="main-box-body clearfix">
@@ -133,10 +134,6 @@
 																										<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
 																										<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
 																									</ul>
-																								</div>
-																								<div class="profile-message-btn center-block text-center">
-																									<input type="radio" id="radio1" name="instructor" checked="checked" class="ui-helper-hidden-accessible form-control" ng-model="newLesson.instructor" value="B_LANDO_B" required="required"><label for="radio1" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left ui-corner-right ui-state-active" role="button" aria-pressed="true"><span class="ui-button-text">Select</span></label>
-																									<br><br>
 																								</div><br><br><br>
 																							</div>
 																						</div>
@@ -144,6 +141,7 @@
 																				<div class="col-md-4 col-lg-4">
 																					<div class="main-box clearfix">
 																								<header class="main-box-header clearfix">
+																								<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="AngelinaJolie"/> Select</label>
 																									<h2>Angelina Jolie</h2>
 																								</header>
 																							<div class="main-box-body clearfix">
@@ -168,10 +166,6 @@
 																										<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
 																										<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
 																									</ul>
-																								</div>
-																								<div class="profile-message-btn center-block text-center">
-																									<input type="radio" id="radio2" name="instructor" class="ui-helper-hidden-accessible form-control" ng-model="newLesson.instructor" value="Angelina_Jolie" required="required"><label for="radio2" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left ui-corner-right" role="button" aria-pressed="false"><span class="ui-button-text">Select</span></label>
-																									<br><br>
 																								</div><br><br><br>
 																							</div>
 																						</div>
@@ -179,6 +173,7 @@
 																				<div class="col-md-4 col-lg-4">
 																					<div class="main-box clearfix">
 																								<header class="main-box-header clearfix">
+																								<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="MilaKunis"/> Select</label>
 																									<h2>Mila Kunis</h2>
 																								</header>
 																							<div class="main-box-body clearfix">
@@ -203,11 +198,8 @@
 																										<li><i class="fa-li fa fa-certificate"></i>PGA Status: <span>PGA Certified Professional</span></li>
 																										<li><i class="fa-li fa fa-mobile"></i>Mobile: <span>(615)123-4567</span></li>
 																									</ul>
-																								</div>
-																								<div class="profile-message-btn center-block text-center">
-																									<input type="radio" id="radio3" name="instructor" class="ui-helper-hidden-accessible form-control" ng-model="newLesson.instructor" value="Mila_Kunis" required="required"><label for="radio3" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left ui-corner-right" role="button" aria-pressed="false"><span class="ui-button-text">Select</span></label>
-																									<br><br>
 																								</div><br><br><br>
+
 																							</div>
 																						</div>
 
