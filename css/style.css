@@ -202,8 +202,21 @@ a.list-group-item-heading {
   font-size: 20px;
 }
 
+#title {
+	border: 0;
+  font: 28px ABeeZee;
+  cursor:pointer;
+}
+
+#appointment_time {
+	border: 0;
+  font: 24px ABeeZee;
+  cursor:pointer;
+}
+
+
 .main-box h2 {
-  font-size: 2em;
+  /*font-size: 2em;*/
   line-height: 29px;
   padding: 0;
   text-align: center;
