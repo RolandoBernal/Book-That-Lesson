@@ -48,7 +48,7 @@
 										        <td>{{lesson.title}}</td>
 										        <td>{{lesson.description}}</td>
 										        <td>{{lesson.instructor}}</td>
-										        <td>{{lesson.appointment_date}} at {{lesson.appointment_time}}</td>
+										        <td>{{lesson.appointment_date | date:"EEEE, MMMM d, yyyy"}} at {{lesson.appointment_time}}</td>
 										        <td><button class="btn btn-danger fa fa-times" ng-click="deleteALesson(keys[$index])"> Cancel Appointment</button></td>
 										      </tr>
 										    </tbody>

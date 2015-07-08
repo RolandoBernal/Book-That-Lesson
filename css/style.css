@@ -200,7 +200,7 @@ a.list-group-item-heading {
 
 .text-info {
   color: #31708f;
-  margin-left: 250px;
+  margin-left: 290px;
 }
 
 .lesson-selection {
@@ -241,7 +241,7 @@ input, button, select, textarea {
 }
 
 .review {
-	padding-left: 20%;
+	padding-left: 15px;
 }
 
 
@@ -389,4 +389,12 @@ input, button, select, textarea {
 
 #selectable:hover {
 	cursor: copy;
+}
+
+.click-instructor {
+	text-align: center;
+}
+
+.select-lesson {
+  font-size: 20px;
 }

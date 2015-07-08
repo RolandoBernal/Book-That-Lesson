@@ -74,19 +74,19 @@
 																				<select id="title" name="title" ng-model="newLesson.title" autofocus="autofocus" required="required">
 																				<option value="swingEvaluation">Swing Evaluation</option>
 																					<optgroup label="Off the tee">
-																						<option value="driver">Driver</option>
-																						<option value="hybrids">Hybrids</option>
-																						<option value="irons">Irons</option>
+																						<option value="Driver">Driver</option>
+																						<option value="Hybrids">Hybrids</option>
+																						<option value="Irons">Irons</option>
 																					</optgroup>
-																					<option value="hybridsAndIrons">Hybrids and Irons</option>
-																					<option value="shortGame">Short Game</option>
+																					<option value="Hybrids And Irons">Hybrids and Irons</option>
+																					<option value="Short Game">Short Game</option>
 																					<option value="Bunkers">Bunkers</option>
-																					<option value="putting">Putting</option>
-																					<option value="fundamentals">Fundamentals</option>
+																					<option value="Putting">Putting</option>
+																					<option value="Fundamentals">Fundamentals</option>
 																				</select>
 																			</fieldset><br><br><br>
 																			<div class="form-group description">
-																				<label for="description"><h2>Description: (tell us a little bit what you want to fix)</h2></label><br>
+																				<label for="description"><h2>Description:</h2> <h4>(tell us a little bit about what you want to fix, what you want to work on)</h4></label><br>
 																				<input id="description" type="text" name="description" ng-model="newLesson.description" required="required" ng-minlength="3" class="form-control"/>
 																			</div>
 																	</div>
@@ -98,15 +98,15 @@
 
 
 																	<div class="step-pane form-group" id="step2">
-																		<br><h2>Who do you want to see?</h2><br>
+																		<br><p><h2>Who do you want to see?</h2><h4 class="click-instructor">(click on the instructor's name to select)</h4></p><br>
 
 																		<div class="row instructor-profile btn-group" data-toggle="buttons">
 																			<div id="radio" class="ui-buttonset">
 																				<div class="col-md-4 col-lg-4">
 																							<div class="main-box clearfix">
 																								<header class="main-box-header clearfix">
-																								<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="LandoB"/> Select</label>
-																									<h2>B, Lando B</h2>
+																									<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="Lando B"/> B, Lando B</label>
+																									<!-- <h2>B, Lando B</h2> -->
 																								</header>
 																							<div class="main-box-body clearfix">
 																								<img src="img/BLandoB.png" alt="" class="profile-img img-responsive center-block">
@@ -122,7 +122,7 @@
 																									<span>Teaching Skills</span>
 																								</div>
 																								<div class="profile-since">
-																									Member since: Dec 2013
+																									Member since: Apr 2008
 																								</div>
 																								<div class="profile-details">
 																									<ul class="fa-ul">
@@ -137,8 +137,8 @@
 																				<div class="col-md-4 col-lg-4">
 																					<div class="main-box clearfix">
 																								<header class="main-box-header clearfix">
-																								<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="AngelinaJolie"/> Select</label>
-																									<h2>Angelina Jolie</h2>
+																									<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="Angelina Jolie"/> Angelina Jolie</label>
+																									<!-- <h2>Angelina Jolie</h2> -->
 																								</header>
 																							<div class="main-box-body clearfix">
 																								<img src="img/AngelinaJolie.png" alt="" class="profile-img img-responsive center-block">
@@ -169,8 +169,8 @@
 																				<div class="col-md-4 col-lg-4">
 																					<div class="main-box clearfix">
 																								<header class="main-box-header clearfix">
-																								<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="MilaKunis"/> Select</label>
-																									<h2>Mila Kunis</h2>
+																									<label><input type="radio" name="instructor" ng-model="newLesson.instructor" value="Mila Kunis"/> Mila Kunis</label>
+																									<!-- <h2>Mila Kunis</h2> -->
 																								</header>
 																							<div class="main-box-body clearfix">
 																								<img src="img/MilaKunis.png" alt="" class="profile-img img-responsive center-block">
@@ -201,7 +201,7 @@
 
 																				</div>
 																			</div>
-																			<div><h4>You selected: <strong>{{newLesson.instructor}}</strong></h4></div>
+																			<div><h4>You selected:</h4> <strong>{{newLesson.instructor}}</strong></div>
 																		</div>
 																	</div>
 
@@ -227,10 +227,10 @@
 																									    <div class="form-group">
 																									      <input type="date" size="10" class="form-control" ng-model="newLesson.appointment_date" data-autoclose="1" placeholder="mm/dd/yyyy" bs-datepicker>
 																									    </div>
+																									    <div class="form-group" ng-show="newLesson.appointment_date">
 																									    <label class="control-label"><i class="fa fa-clock-o"></i> Select Time:</label><br>
-																									    <div class="form-group">
-																									    <fieldset class="select-lesson">
-																												<label for="time-selection"><h2>Time:</h2></label>
+																									    <fieldset class="select-time">
+																												<!-- <label for="time-selection">Time:</label> -->
 																												<select id="appointment_time" name="appointment_time" ng-model="newLesson.appointment_time" autofocus="autofocus" required="required">
 																													<option value="7:00 AM">7:00 am</option>
 																													<option value="8:00 AM">8:00 am</option>
@@ -263,7 +263,7 @@
 
 																	<div class="step-pane review" id="step4">
 																	<br>
-																	<h4>Review your appointment</h4>
+																	<h4 class="click-instructor">Review your appointment</h4>
 																		<div class="row">
 																			<div class="col-lg-1 col-md-1"></div>
 																			<div class="col-lg-10 col-md-10">
