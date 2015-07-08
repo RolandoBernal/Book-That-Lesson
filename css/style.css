@@ -101,10 +101,6 @@ a.navbar-inverse:active {
 	font-size: 2.2em;
 }
 
-/*.book-that-lesson {
-	color: red;
-}*/
-
 
 /*Link Color*/
 
@@ -210,7 +206,7 @@ a.list-group-item-heading {
 
 #appointment_time {
 	border: 0;
-  font: 24px ABeeZee;
+  font: 22px ABeeZee;
   cursor:pointer;
 }
 
@@ -404,6 +400,36 @@ input, button, select, textarea {
 .select-lesson {
   font-size: 20px;
 }
+
+/* Radio Buttons Style
+----------------------------------*/
+
+.radio-toolbar input[type="radio"] {
+    display:none;
+}
+
+.radio-toolbar label {
+  display:inline-block;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  border-radius: 5px;
+  padding:4px 11px;
+  font-size: 1em;
+  font-family:'ABeeZee';
+  /*font-size:16px;*/
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+
+
+
+
 
 /* Calendar Style
 ----------------------------------*/
