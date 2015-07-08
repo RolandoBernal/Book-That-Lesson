@@ -228,15 +228,11 @@
 																									  <div class="form-group">
 																									    <label class="control-label"><i class="fa fa-calendar"></i> Select Date:</label><br>
 																									    <div class="form-group">
-																									      <input type="text" size="10" class="form-control" ng-model="newLesson.appointment_date" data-autoclose="1" placeholder="mm/dd/yyyy" bs-datepicker>
+																									      <input type="date" size="10" class="form-control" ng-model="newLesson.appointment_date" data-autoclose="1" placeholder="mm/dd/yyyy" bs-datepicker>
 																									    </div>
 																									    <label class="control-label"><i class="fa fa-clock-o"></i> Select Time:</label><br>
 																									    <div class="form-group">
-																									      <input type="text" size="8" class="form-control" ng-model="newLesson.appointment_time" data-time-format="h:mm:ss a" data-autoclose="1" placeholder="hh:mm" bs-timepicker>
-																									    </div>
-																									    <div>
-																									    	<p>Your date: {{newLesson.appoinment_date}}</p>
-																									    	<p>Your time: {{newLesson.appoinment_time}}</p>
+																									      <input type="time" size="8" class="form-control" ng-model="newLesson.appointment_time" data-time-format="h:mm" data-autoclose="1" placeholder="hh:mm" bs-timepicker>
 																									    </div>
 																									  </div>
 																									</form>
@@ -259,12 +255,11 @@
 																			<div class="col-lg-1 col-md-1"></div>
 																			<div class="col-lg-10 col-md-10">
 																					<p><h2>{{username}},</h2></p>
-																					<h3>
-																					<p>Your appointment for: <strong>{{newLesson.title}}</strong></p>
-																					<p>to <h2>{{newLesson.description}}</h2></p>
-																					<p>with instructor <strong>{{newLesson.instructor}}</strong></p>
-																					<p>on <strong>{{newLesson.appointment_date}}</strong> at <strong>{{newLesson.appointment_time}}</strong> is ready!</p>
-																					</h3>
+
+																					<p><h3>Your appointment for: <strong>{{newLesson.title}}</strong></h3></p>
+																					<p><h3>to work on <strong>{{newLesson.description}}</strong></h3></p>
+																					<p><h3>with instructor <strong>{{newLesson.instructor}}</strong></h3></p>
+																					<p><h3>on <strong>{{newLesson.appointment_date | date:"EEEE, MMMM d, yyyy"}}</strong> at <strong>{{newLesson.appointment_time}}</strong> is ready!</p><br><br><br><br>
 																					<div>
 																						<button ng-click="addLesson()" class="btn btn-large btn-primary">Book It! >></button>
 																					</div>
